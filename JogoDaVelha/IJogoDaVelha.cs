@@ -1,4 +1,4 @@
 public interface IjogoDaVelha{
-    double ContarCamposVazios();
+    int ContarCamposVazios();
     void ExecutarMovimento(int x, int y);
 }

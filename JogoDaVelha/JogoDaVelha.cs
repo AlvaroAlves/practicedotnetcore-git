@@ -6,8 +6,12 @@ namespace JogoDaVelha
     {
         private Tabuleiro _tabuleiro { get; set;}
 
-        public double ContarCamposVazios(){
-            return 0;
+        public JogoDaVelhaGame(){
+            _tabuleiro = new Tabuleiro();
+        }
+
+        public int ContarCamposVazios(){
+            return _tabuleiro.CamposVazios;
         }
 
         public void ExecutarMovimento(int x, int y){
