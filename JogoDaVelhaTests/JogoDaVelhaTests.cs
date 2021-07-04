@@ -1,8 +1,8 @@
 using NUnit.Framework;
 
-namespace JogoDaVelhaTests
+namespace JogoDaVelha.Tests
 {
-    public class Tests
+    public class CoreTests
     {
         [SetUp]
         public void Setup()
@@ -10,7 +10,7 @@ namespace JogoDaVelhaTests
         }
 
         [Test]
-        public void Test1()
+        public void CamposVaziosDevemSerIguaisA9EmUmNovoJogo()
         {
             Assert.Pass();
         }
