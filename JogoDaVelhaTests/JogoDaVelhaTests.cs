@@ -12,7 +12,8 @@ namespace JogoDaVelha.Tests
         [Test]
         public void CamposVaziosDevemSerIguaisA9EmUmNovoJogo()
         {
-            Assert.Pass();
+            var jogoDaVelha = new JogoDaVelhaGame();
+            Assert.AreEqual(9, jogoDaVelha.ContarCamposVazios());
         }
     }
 }
