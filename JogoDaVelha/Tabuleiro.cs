@@ -19,7 +19,7 @@ namespace JogoDaVelha
         private int[,] _tabuleiro {get;set;}
 
         public Tabuleiro(){
-            camposVazios = 9;
+            camposVazios = Colunas * Linhas;
             _tabuleiro = new int[Colunas, Linhas];
 
             //inicializando o tabuleiro
