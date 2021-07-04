@@ -31,7 +31,16 @@ namespace JogoDaVelha.Tests
         }
 
         [Test]
-        public void MovimentoForaDoRangeDoTabuleiroDevemGerarErro()
+        public void ColunaForaDoRangeDoTabuleiroDevemGerarErro()
+        {
+            var jogoDaVelha = new JogoDaVelhaGame();
+            
+            Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(10, 1);});
+
+        }
+
+        [Test]
+        public void LinhaForaDoRangeDoTabuleiroDevemGerarErro()
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             
