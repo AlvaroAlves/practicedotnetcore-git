@@ -44,7 +44,7 @@ namespace JogoDaVelha.Tests
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             
-            Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(10, 1);});
+            Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(1, 10);});
 
         }
     }
