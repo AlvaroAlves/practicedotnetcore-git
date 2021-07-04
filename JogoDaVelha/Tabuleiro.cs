@@ -16,11 +16,11 @@ namespace JogoDaVelha
             private set { camposVazios = value; }
         }
         
-        private int[,] _tabuleiro {get;set;}
+        private char[,] _tabuleiro {get;set;}
 
         public Tabuleiro(){
             camposVazios = Colunas * Linhas;
-            _tabuleiro = new int[Colunas, Linhas];
+            _tabuleiro = new char[Colunas, Linhas];
 
             //inicializando o tabuleiro
             for (int col = 0; col < Colunas; col++){
@@ -28,6 +28,10 @@ namespace JogoDaVelha
                     _tabuleiro[col, lin] = 0;
                 }
             }
+        }
+
+        public void ExecutarJogada(int x, int y, char simbolo){
+            _tabuleiro[x, y] = simbolo;
         }
     }
 }
