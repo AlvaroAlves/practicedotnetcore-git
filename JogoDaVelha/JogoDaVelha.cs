@@ -2,7 +2,10 @@
 
 namespace JogoDaVelha
 {
-    public class JogoDaVelha
+    public class JogoDaVelhaGame : IjogoDaVelha
     {
+        public double ContarCamposVazios(){
+            return 0;
+        }
     }
 }
