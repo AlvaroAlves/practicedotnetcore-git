@@ -9,6 +9,14 @@ namespace JogoDaVelha
         private const int Colunas = 3;
         private const int Linhas = 3;
 
+        public static int MAX_COL {
+            get {return Colunas; }
+        }
+
+        public static int MAX_LIN {
+            get {return Linhas;}
+        }
+
         private int camposVazios;
         public int CamposVazios
         {
@@ -30,7 +38,7 @@ namespace JogoDaVelha
             }
         }
 
-        public void ExecutarJogada(int x, int y, char simbolo){
+        public void ExecutarJogada(int x, int y, char simbolo){    
             _tabuleiro[x, y] = simbolo;
 
             camposVazios--;

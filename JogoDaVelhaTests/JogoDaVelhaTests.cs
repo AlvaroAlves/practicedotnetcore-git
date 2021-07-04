@@ -29,5 +29,14 @@ namespace JogoDaVelha.Tests
             Assert.AreEqual(camposVaziosIniciais - 1, jogoDaVelha.ContarCamposVazios());
         
         }
+
+        [Test]
+        public void MovimentoForaDoRangeDoTabuleiroDevemGerarErro()
+        {
+            var jogoDaVelha = new JogoDaVelhaGame();
+            
+            Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(10, 1);});
+
+        }
     }
 }

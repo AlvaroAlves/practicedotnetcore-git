@@ -17,6 +17,9 @@ namespace JogoDaVelha
         }
 
         public void ExecutarMovimento(int x, int y){
+            if(x > Tabuleiro.MAX_COL || y > Tabuleiro.MAX_LIN)
+                throw new InvalidMoveException("Indíce fora dos limites da matriz");
+
             _tabuleiro.ExecutarJogada(x, y, _simboloDoJogador);
 
             if (_simboloDoJogador == 'X')
