@@ -7,5 +7,9 @@ namespace JogoDaVelha
         public double ContarCamposVazios(){
             return 0;
         }
+
+        public void ExecutarMovimento(int x, int y){
+
+        }
     }
 }
