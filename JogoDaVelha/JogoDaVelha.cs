@@ -20,6 +20,9 @@ namespace JogoDaVelha
             if(x > Tabuleiro.MAX_COL || y > Tabuleiro.MAX_LIN)
                 throw new InvalidMoveException("Indíce fora dos limites da matriz");
 
+            if (!_tabuleiro.IsCampoVazio(x,y))
+                throw new InvalidMoveException("O Campo já está sendo utilizado, tente outra jogada");
+
             _tabuleiro.ExecutarJogada(x, y, _simboloDoJogador);
 
             if (_simboloDoJogador == 'X')

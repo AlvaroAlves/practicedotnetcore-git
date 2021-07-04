@@ -6,8 +6,11 @@ namespace JogoDaVelha
 {
     internal class Tabuleiro : ITabuleiro
     {
-        private const int Colunas = 3;
-        private const int Linhas = 3;
+        #region Membros Privados
+            private const int Colunas = 3;
+            private const int Linhas = 3;
+        
+        #endregion
 
         public static int MAX_COL {
             get {return Colunas; }
@@ -42,6 +45,13 @@ namespace JogoDaVelha
             _tabuleiro[x, y] = simbolo;
 
             camposVazios--;
+        }
+
+        public bool IsCampoVazio(int x, int y){
+            if ( _tabuleiro[x, y] != ' ')
+                return false;
+            
+            return true;
         }
     }
 }

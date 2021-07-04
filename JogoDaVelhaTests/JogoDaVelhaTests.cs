@@ -10,14 +10,14 @@ namespace JogoDaVelha.Tests
         }
 
         [Test]
-        public void CamposVaziosDevemSerIguaisA9EmUmNovoJogo()
+        public void ContarCamposVazios_CamposVaziosDevemSerIguaisA9EmUmNovoJogo()
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             Assert.AreEqual(9, jogoDaVelha.ContarCamposVazios());
         }
 
         [Test]
-        public void CamposVaziosDevemDiminuirAoExecutarUmMovimento()
+        public void ContarCamposVazios_CamposVaziosDevemDiminuirAoExecutarUmMovimento()
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             var camposVaziosIniciais = 9;
@@ -31,7 +31,7 @@ namespace JogoDaVelha.Tests
         }
 
         [Test]
-        public void ColunaForaDoRangeDoTabuleiroDevemGerarErro()
+        public void ExecutarMovimento_ColunaForaDoRangeDoTabuleiroDevemGerarErro()
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             
@@ -40,12 +40,23 @@ namespace JogoDaVelha.Tests
         }
 
         [Test]
-        public void LinhaForaDoRangeDoTabuleiroDevemGerarErro()
+        public void ExecutarMovimento_LinhaForaDoRangeDoTabuleiroDevemGerarErro()
         {
             var jogoDaVelha = new JogoDaVelhaGame();
             
             Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(1, 10);});
 
+        }
+
+         [Test]
+        public void ExecutarMovimento_RealizarJogadaEmCasaOcupadaDeveGerarErro()
+        {
+            var jogoDaVelha = new JogoDaVelhaGame();
+            
+            jogoDaVelha.ExecutarMovimento(0, 1);
+            Assert.Throws<InvalidMoveException>(() => { jogoDaVelha.ExecutarMovimento(0, 1);});
+
+            
         }
     }
 }
