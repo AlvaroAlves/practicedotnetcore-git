@@ -25,13 +25,15 @@ namespace JogoDaVelha
             //inicializando o tabuleiro
             for (int col = 0; col < Colunas; col++){
                 for (int lin = 0; lin < Linhas; lin++){
-                    _tabuleiro[col, lin] = 0;
+                    _tabuleiro[col, lin] = ' ';
                 }
             }
         }
 
         public void ExecutarJogada(int x, int y, char simbolo){
             _tabuleiro[x, y] = simbolo;
+
+            camposVazios--;
         }
     }
 }
